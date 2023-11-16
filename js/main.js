@@ -1,6 +1,5 @@
 import jugadores from '../data/jugadores.js'
 
-console.log(jugadores)
 const tabla = document.querySelector('#tabla-body');
 
 const cargarTabla = () => {
@@ -28,7 +27,6 @@ const cargarTabla = () => {
       <td>${jugador.partidas ? jugador.partidas : "Privado"}</td>
     `;
     tabla.appendChild(row);
-    console.log(jugador)
   })
 }
 document.addEventListener('DOMContentLoaded',  () => {
