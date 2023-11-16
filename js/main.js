@@ -46,4 +46,19 @@ document.addEventListener('DOMContentLoaded',  () => {
       }
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  // Agrega un evento 'click' a cada enlace del menú
+  var links = document.querySelectorAll('.nav-link');
+  links.forEach(function(link) {
+      link.addEventListener('click', cerrarMenu);
+  });
+
+  function cerrarMenu() {
+      var navBar = document.querySelector('.navbar-collapse');
+      if (navBar.classList.contains('show')) {
+          var toggleButton = document.querySelector('.navbar-toggler');
+          toggleButton.click(); // Cierra el menú hamburguesa si está abierto
+      }
+  }
+});
 cargarTabla();
